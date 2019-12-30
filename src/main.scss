@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap');
+
+// @import './stylesheets/css/all.css';
+
+// VARIABLES
+
+$color-grey: rgba(82,82,82,.7);
+$color-grey-light: rgba(82,82,82,.2797);
+
+
+// BASE 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 64.5%;
+
+  body{
+    margin-top: 4rem;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.6;
+    font-size: 1.6rem;
+  }
+
+}
+
+//HEADER
+
+.header {
+  margin-top: 5rem;
+
+  &__nav-cart {
+    margin-top: 1.2rem;
+    position: relative;
+  }
+}
+
+//TITLE
+
+.title {
+  font-family: 'Nanum Gothic Coding', monospace;
+  text-transform: uppercase;
+  font-weight:600;
+  text-align: center;
+
+  &--header {
+
+  }
+
+  &--footer{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+
+//NAV
+
+.nav {
+  display: flex;
+  justify-content: center;
+  
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.92rem;
+    letter-spacing: 0.4px;
+    word-spacing: 3px;
+
+    &:not(:last-child){
+      margin-right: 1.4rem;
+    }
+  }
+
+  &__link {
+    color: rgba(82, 82, 82, 0.65);
+    text-decoration: none;
+
+    &:hover{
+      color: $color-grey;
+      transition: all .3s;
+    }
+  }
+
+  &__list:hover &__link:not(:hover){
+    color: $color-grey-light;
+    transition: all .3s;
+  }
+
+  &--social{
+    margin-bottom: 4.5rem;
+
+    .nav__link {
+      color: #333;
+      text-decoration: none;
+
+      &:hover{
+        color: #333;
+        transition: all .3s;
+      }
+    }
+    .nav__icon{
+      font-size: 1.4rem;
+    }
+  }
+
+  &--secondary{
+    margin-bottom: 4.7rem;
+  }
+
+
+}
+
+//CART
+
+.cart {
+  position: absolute;
+  top: -3rem;
+  right: 9.3rem;
+  cursor: pointer;
+  
+  
+  &__icon {
+    fill: rgba(82, 82, 82, 0.6);  
+    width: 2.9rem;
+    height: 2.9rem;
+
+    &:hover {
+      fill: #bbb; 
+      transition: all .3s;
+    }
+  }
+  
+  &__item-count {
+    display: inline-flex;
+    color: white;
+    width: 1.6rem;
+    height: 1.68rem;
+    border-radius: 100%;
+    background-color: $color-grey;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    position: absolute;
+    top: -4.1px;
+    left: 2.2rem;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 0.5px;
+    padding-top: 0.1rem;
+  }
+}
+
+//FOOTER
+
+.footer {
+  text-align: center;
+
+  &__signup-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 3.2rem;
+  }
+
+}
+
+.signup{
+  margin-bottom: 4rem;
+
+  &__field {
+    border: 1px solid #ddd;
+    padding: 1.5rem 1.5rem;
+    width: 24rem;
+    border-radius: 2px;
+    color: rgba(29, 29, 29, 0.36);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder{
+      color: rgba(29, 29, 29, 0.36);
+    }
+  }
+
+  &__btn{
+    padding: 1.4rem 3.8rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    border: 2px solid #222;
+    font-size: 1.2rem;
+    margin-left: .6rem;
+
+    &:hover{
+      background-color: #222;
+      color: white;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+//LOVE
+
+.love-text {
+  color: #222;
+  text-transform: uppercase;
+  font-size: .92rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.8px;
+
+  &__heart {
+    color: #e25555
+  }
+
+  a{
+   text-decoration: none;
+   color: #222; 
+   display: inline-block;
+   border-bottom: 1px solid rgba(82, 82, 82, 0.65);
+   line-height: 1.16;
+
+   &:hover {
+     color: rgba(82, 82, 82, 0.65);
+     transition: all .2s;
+     
+   }
+  }
+}
