@@ -704,6 +704,133 @@ html {
   }
 }
 
-app-about {
-  opacity: 0;
+// SHOPPING
+
+.shopping-card {
+
+  padding: 0 7rem;
+  display: flex;
+  margin-top:11.7rem;
+
+  @media screen and (max-width: 940px){
+    padding: 0 5rem;
+  }
+
+  @media screen and (max-width: 580px){
+    flex-direction: column;
+    padding: 0 2.6rem;
+    margin-top: 4rem;
+  }
+
+  &__left {
+    flex-basis: 40%;
+    padding-right: 4rem;
+
+    @media screen and (max-width: 940px){
+      flex-basis: 50%;
+    }
+
+    @media screen and (max-width: 700px){
+      flex-basis: 60%;
+    }
+
+    @media screen and (max-width: 580px){
+      order: 2;
+      margin-top: .4rem;
+    }
+
+  }
+
+  &__right{
+    flex-basis: 60%;
+
+    @media screen and (max-width: 940px){
+      flex-basis: 50%;
+    }
+
+    @media screen and (max-width: 700px){
+      flex-basis: 40%;
+    }
+
+    @media screen and (max-width: 580px){
+      order: 1;
+    }
+  }
+
+  &__nav {
+
+  }
+
+  &__heading {
+    color: #222;
+    font-family: $font-din;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 600;
+    word-spacing: -2px;
+  }
+
+  &__price {
+    color: #9f9f9f;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    word-spacing: 2.4px;
+    letter-spacing: .2px;
+    margin: 1.4rem 0 2rem;
+
+  }
+
+  &__text {
+
+  }
+
+  &__control {
+    margin: -1rem 0 1.8rem;
+  }
+
+  &__label {
+    color: #9f9f9f;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-size: .9rem;
+    word-spacing: 2.4px;
+    letter-spacing: 1.2px;
+  }
+
+  &__input {
+    border: 2px solid rgba(238,238,238,0);
+    background-color: #f6f6f6;
+    width: 7.6rem;
+    height: 3.6rem;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: .1pc;
+    text-transform: uppercase;
+    color: rgba(82,82,82,.7);
+    padding: 0rem 1.2rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn{
+    padding: 2.1rem 4.2rem;
+    font-size: .95rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
+
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
 }

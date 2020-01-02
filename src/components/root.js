@@ -13,9 +13,10 @@ class RootComponent extends HTMLElement {
     this._activateLinks();    
     this.addEventListener('juicesBtnClick', this._childBtnClick.bind(this)); 
     this.addEventListener('shopBtnClick', this._childBtnClick.bind(this));
+    this.addEventListener('buyJuiceClick', this._buyJuiceClick.bind(this));
     
-    const initialView = document.createElement('app-about');
-    this._render(initialView);
+    // const initialView = document.createElement('app-about');
+    // this._render(initialView);
   }
 
   _activateLinks() {
@@ -33,6 +34,12 @@ class RootComponent extends HTMLElement {
     const path = e.detail;
     const view = this._initView(path);
     this._render(view);
+  }
+
+  _buyJuiceClick(e){
+   const view =  document.createElement('app-shopping');
+   view.setAttribute('juice', e.detail.slice(1));
+   this._render(view)
   }
 
   _getActivatedPath(e){

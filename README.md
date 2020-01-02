@@ -20,7 +20,7 @@ clone repo
 run `npm start`
 
 # Live Version
-#### URL: [Start Noting Todos](https://dist.ayezahmed.now.sh  )
+#### URL: [Start Browsing and Ordering Delicious Juices](https://dist.ayezahmed.now.sh  )
 
 # Author
 + Saintaze [@saintaze](https://github.com/saintaze/)
