@@ -169,8 +169,8 @@ html {
   &__item-count {
     display: inline-flex;
     color: white;
-    width: 1.6rem;
-    height: 1.68rem;
+    min-width: 1.8rem;
+    min-height: 1.88rem;
     border-radius: 100%;
     background-color: $color-grey;
     align-items: center;
@@ -711,6 +711,7 @@ html {
   padding: 0 7rem;
   display: flex;
   margin-top:11.7rem;
+  position: relative;
 
   @media screen and (max-width: 940px){
     padding: 0 5rem;
@@ -719,7 +720,7 @@ html {
   @media screen and (max-width: 580px){
     flex-direction: column;
     padding: 0 2.6rem;
-    margin-top: 4rem;
+    margin-top: 9rem;
   }
 
   &__left {
@@ -823,6 +824,12 @@ html {
     font-weight: 500;
     letter-spacing: 0.5px;
     word-spacing: 1px;
+    width: 165.7px;
+    color: #222;
+
+    &:hover {
+      color: white;
+    }
   }
 
   &__img {
@@ -830,6 +837,54 @@ html {
   }
 }
 
+.shopping-card-nav{
+  margin-bottom: 3rem;
+  position: absolute;
+  top: -6.5rem;
+
+  @media screen and (max-width: 580px){
+    top: -6.3rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  // &__carrot {
+  //   display: none;
+  // }
+
+  // // &__vanilla {
+  // //   display: none;
+  // // }
+
+  // &__orange{
+  //   display: none;
+  // }
+
+  &__chevron, &__text, &__separator {
+    color: rgba(82,82,82,.7);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-size: .76rem;
+    word-spacing: 2.4px;
+    letter-spacing: .2px;
+    word-spacing: 2.4px;
+    letter-spacing: 1.2px;
+  }
+
+   &__chevron {
+     font-size: .9rem;
+   }
+
+   &__separator{
+     font-size: .7rem;
+     display: inline-block;
+     margin: 0 .2rem;
+   }
+
+}
 
 input[type=number]::-webkit-inner-spin-button { 
     -webkit-appearance: none;
