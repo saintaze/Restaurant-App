@@ -1,3 +1,9 @@
 import './main.scss';
-
-
+import './components/root';
+import './components/about';
+import './components/juices';
+import './components/contact';
+import './components/shop';
+import './components/stockists';
+import './components/faq';
+import './components/blog';

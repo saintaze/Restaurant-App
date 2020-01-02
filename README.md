@@ -1,16 +1,15 @@
-# Todo-App
-An app for noting todos. 
+# Restaurant-App
+A restaurant browsing and ordering app.
 
 ### Features
-+ A group of todos belong to a project.
-+ A project can have many todos.
-+ Full CRUD functionality.
-+ Vanilla JS WebComponent Architecture.
-+ LocalStorage used for saving and retrieving data.
++ Single Page Application (SPA) built with Native JS
++ Native JS WebComponent Architecture
++ Responsive Design
++ Webpack used for Tooling
 
 ##### Built With
 + HTML5
-+ CSS3
++ CSS3 (SASS)
 + Javascript (Vanilla)
 
 ### Getting Started
@@ -25,3 +24,6 @@ run `npm start`
 
 # Author
 + Saintaze [@saintaze](https://github.com/saintaze/)
+
+
+

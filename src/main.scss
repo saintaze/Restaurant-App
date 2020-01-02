@@ -86,7 +86,7 @@ html {
     font-family: $font-proxima;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 0.92rem;
+    font-size: 0.88rem;
     letter-spacing: 0.4px;
     word-spacing: 3px;
 
@@ -151,7 +151,7 @@ html {
   }
     
   &__icon {
-    fill: rgba(82, 82, 82, 0.6);  
+    fill: rgba(82, 82, 82, 0.67);  
     width: 2.9rem;
     height: 2.9rem;
 
@@ -267,7 +267,11 @@ html {
   }
 }
 
-// ROOTS PAGE STYLES
+.center{
+  text-align: center;
+}
+
+// ROOTS PAGE 
 
 
 .banner {
@@ -307,19 +311,32 @@ html {
   @media screen and (max-width: 580px){
     margin-bottom: 2.6rem;
     font-size: 1.04rem;
+  }
 
+  &--contact {
+    margin-bottom: 2.2rem;
+    color: rgba(82,82,82,.6);
   }
 }
 
 .page-heading {
   text-transform: uppercase;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   font-family: $font-din;
   margin-bottom: 2.2rem;
 
   @media screen and (max-width: 580px){
     margin-bottom: 1.8rem;
     font-size: 2.1rem;
+  }
+
+  &--contact{
+    margin-top: 12rem;
+    margin-bottom: 1.6rem;
+
+    @media screen and (max-width: 580px){
+      margin-top: 4rem;
+    }
   }
 
 }
@@ -351,5 +368,342 @@ html {
     padding: 1.9rem 3.8rem;
     font-weight: 600;
     letter-spacing: 0.8px;
+    color: #222;
+    text-decoration: none;
   }
+
+  &--submit{
+    padding: 1.2rem 3.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 2.8rem;
+  }
+}
+
+//CONTACT PAGE
+
+.form {
+  color: #ccc;
+  
+  &__name{
+    display: flex;
+    
+    .form__control {
+      flex-grow: 1;
+
+      &:not(:last-child){
+        margin-right: 1rem;
+      }
+    }
+  }
+  
+  &__control {
+    &:not(:last-child){
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 1.05rem;
+    color: rgba(82,82,82,.65);
+    letter-spacing: .1px;
+    margin-bottom: 0;
+    line-height: 2.4;
+    font-family: $font-proxima;
+  }
+
+  &__required {
+    display: inline-block;
+    margin-left: .4rem;
+  }
+
+  &__helper-text {
+    display: block;
+    font-size: 1rem;
+    color: rgba(82,82,82,.65);
+    letter-spacing: .1px;
+    margin-bottom: 0;
+    line-height: 2.4;
+    font-family: $font-proxima;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fafafa;;
+    border-radius: 2px;
+    padding: 1.1rem;
+    font-family: $font-proxima;
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__textarea{
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fafafa;;
+    border-radius: 2px;
+    padding: 1.1rem;
+    font-family: $font-proxima;
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+// SHOP VIEW
+
+.banner-shop {
+  display: flex;
+  padding: 0 3rem;
+  margin: 0 auto;
+  margin-top: 7.5rem;
+
+  @media screen and (max-width: 580px){
+    flex-direction: column;
+    margin-top: 4rem;
+    padding: 0 2.6rem;
+  }
+
+  &__left {
+    margin-right: 2rem;
+    width: 66.67%;
+   
+    @media screen and (max-width: 580px){
+      width: 100%;
+      margin-bottom: 2rem;
+      margin-right: 0;
+    }
+
+    .banner-shop__link {
+      height: 100%;
+
+      @media screen and (max-width: 580px){
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  &__right {
+    width: 33.33%;
+    @media screen and (max-width: 580px){
+      width: 100%;
+    }
+
+    .banner-shop__link {
+      display: block;
+      height: calc((100% - 2rem) / 2);
+      
+      &:first-child {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+    height: 100%;
+
+    &--left{
+      height: 100%;
+    }
+
+    &--right{
+      width: 100%;
+      
+    }
+  }
+
+  &__img-name {
+    color: #9f9f9f;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: $font-proxima;
+    font-size: .9rem;
+    word-spacing: 2.4px;
+    letter-spacing: .2px;
+    position: absolute;
+
+
+   &--right{
+    top: 3.4rem;
+    left: 3rem;
+
+  }
+
+   &--left {
+     top: 3.4rem;
+     left: 3rem;
+   }
+  }
+}
+
+// STOCKISTS
+
+.stockists {
+  margin-top: 12rem;
+  
+  @media screen and (max-width: 580px){
+    margin-top: 4rem;
+  }
+}
+
+.stockists-list {
+  margin-top: 7.9rem;
+
+  @media screen and (max-width: 580px){
+    margin-top: 4.5rem;
+  }
+
+  &__row {  
+
+ }
+}
+
+
+.stockist {
+
+  margin-bottom: 4rem;
+
+  @media screen and (max-width: 580px){
+    margin-bottom: 2rem;
+  }
+
+  &__heading {
+    font-family: $font-din;
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  &__address {
+    font-family: $font-proxima;
+    color: #999;
+    font-size: 1.08rem;
+  }
+
+  &__contact {
+    font-family: $font-proxima;
+    color: #999;
+    font-size: 1rem;
+  }
+}
+
+
+// FAQ
+
+.faqs{
+  margin-top: 12rem;
+
+  @media screen and (max-width: 580px){
+    margin-top: 4rem;
+  }
+}
+
+.faq-box {
+  margin-top: 7.9rem;
+
+  @media screen and (max-width: 580px){
+    margin-top: 4.5rem;
+  }
+}
+
+.faq{
+
+  margin-bottom: 4rem;
+  @media screen and (max-width: 580px){
+    margin-bottom: 2rem;
+  }
+  
+
+  &__question{
+    font-family: $font-din;
+    font-weight: 800;
+    font-size: 1.74rem;
+    word-spacing: -1px;
+    text-transform:  uppercase;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+
+  &__answer {
+    @media screen and (max-width: 580px){
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+
+// BLOG
+
+.blog {
+
+  &:not(:last-child){
+    margin-bottom: 11rem;
+  }
+  
+  &:first-of-type {
+    margin-top: 7.9rem;
+
+    @media screen and (max-width: 580px){
+      margin-top: 4.5rem;
+    }
+  }
+
+  &__date{
+    color: #9f9f9f;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-size: .9rem;
+    word-spacing: 2.4px;
+    letter-spacing: .2px;
+    text-align: center;
+  } 
+
+  &__heading{
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: 800;
+    font-size: 1.8rem;
+    word-spacing: -1px;
+    margin-bottom: 2rem;
+    color: #333;
+    text-align: center;
+    margin: 2.2rem 0 1.6rem;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    padding: 0 14%;
+    word-break: break-all;
+    
+    @media screen and (max-width: 580px){
+      padding : 0;
+
+    }
+  }
+}
+
+app-about {
+  opacity: 0;
 }
