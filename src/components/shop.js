@@ -1,7 +1,5 @@
 const template = document.createElement('template');
 template.innerHTML = `
-  <style>
-  </style>
   <section class="shop">
     <div class="banner-shop">
       <div class="banner-shop__left">
@@ -26,7 +24,6 @@ template.innerHTML = `
       </div>
     </div>
   </section>
-  
 `
 
 class ShopComponent extends HTMLElement {

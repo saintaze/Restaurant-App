@@ -28,14 +28,7 @@ class RootComponent extends HTMLElement {
     this._render(initialView);
   }
 
-  _adjustCartTotalCount(item) {
-
-  }
-
-  _cartInputChange(e){
-    console.log('root', e.detail);
-    console.log(this._cartItems);
-    
+  _cartInputChange(e){    
     const $cartCount = document.querySelector('.cart__item-count');
     $cartCount.textContent = '';
     this._cartTotalCount = 0;
@@ -45,7 +38,6 @@ class RootComponent extends HTMLElement {
       }
       this._cartTotalCount += Number(i.count)
     })
-    console.log(this._cartTotalCount)
     $cartCount.textContent = this._cartTotalCount > 100 ? '100+' : this._cartTotalCount;
 
     const view = this._initView('/cart');
@@ -54,7 +46,6 @@ class RootComponent extends HTMLElement {
   }
 
   _itemCancelClick(e){
-    console.log('root', e.detail)
     this._deductCartTotalCount(e.detail.count);
     this._cartItems = this._cartItems.filter(i => i.type !== e.detail.path.slice(1));
     const view = this._initView('/cart');
@@ -91,7 +82,6 @@ class RootComponent extends HTMLElement {
       if (index !== -1) {
         this._cartItems[index] = { ...item, count: item.count + this._cartItems[index].count };
       } else {
-        console.log('s')
         this._cartItems.push(item);
       }
     }

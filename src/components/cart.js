@@ -4,9 +4,6 @@ import carrot from '../images/carrot-sm.jpg';
 
 const template = document.createElement('template');
 template.innerHTML = `
-  <style>
-  </style>
-
   <section class="cart-summary">
     <h1 class="cart-summary__heading">shopping cart</h1>
     <p class="cart-summary__text page-text">You have nothing in your shopping cart. Continue Shopping</p>
@@ -62,7 +59,6 @@ template.innerHTML = `
       </div>
     </div>  
   </section>
-
 `
 
 class CartComponent extends HTMLElement {
@@ -136,7 +132,6 @@ class CartComponent extends HTMLElement {
     e.preventDefault();
     const event = this._createNewEvent('itemNameClick', e.target.pathname);
     this.dispatchEvent(event);
-    console.log(event)
   }
 
   _hideElements(){

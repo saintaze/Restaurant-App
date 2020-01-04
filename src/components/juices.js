@@ -1,8 +1,5 @@
 const template = document.createElement('template');
 template.innerHTML = `
-  <style>
-  </style>
-
   <section class="juices">
     <div class="banner">
       <img class="banner__img" src="https://images.squarespace-cdn.com/content/v1/5794fb301b631bb13257714c/1475248968009-JUSNHNWELSC8N17TT2D8/ke17ZwdGBToddI8pDm48kNL_f0ssoLgHIkKD7JmGQqx7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UU3VrmyTOP4T61XLnSutxMGE6-QAkQjd9MkPLK55j40zVMfZ_fU2mqhXiOYZfVnqnQ/image-asset.jpeg?format=1500w" alt="">

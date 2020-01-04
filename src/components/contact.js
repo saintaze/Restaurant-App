@@ -1,8 +1,5 @@
 const template = document.createElement('template');
 template.innerHTML = `
-  <style>
-  </style>
-
   <section class="contact">
     <div class="content">
       <div class="center">

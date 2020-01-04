@@ -4,9 +4,6 @@ import carrot from '../images/carrot.jpg';
 
 const template = document.createElement('template');
 template.innerHTML = `
-  <style>
-  </style>
-
   <section class="shopping-card">
     <div class="shopping-card__left">
        <div class="shopping-card-nav">
