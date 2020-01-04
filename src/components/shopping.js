@@ -59,6 +59,7 @@ class ShoppingComponent extends HTMLElement {
     this._juiceType = this.getAttribute('juice');
     this._activateNavLinks();
 
+    this._scrollToPos()
     const $img = this.querySelector('.shopping-card__img');
     $img.src = this._getJuiceImg(this._juiceType);
 
@@ -68,13 +69,20 @@ class ShoppingComponent extends HTMLElement {
     this._renderJuiceNav()
   }
 
+  _scrollToPos() {
+    const posY = this.getAttribute('posY');
+    if (posY) {
+      window.scrollTo(0, posY)
+    }
+  }
+
   _handleItemPurchase(e) {
     this._activateBtnPhases()
   }
 
   _sendItemPurchaseEvent() {
     const itemCount = document.querySelector('.shopping-card__input').value;
-    const event = this._createNewEvent('itemPurchase', { type: this._juiceType, count: itemCount });
+    const event = this._createNewEvent('itemPurchase', { type: this._juiceType, count: Math.floor(+itemCount) });
     this.dispatchEvent(event);
   }
 
@@ -86,11 +94,16 @@ class ShoppingComponent extends HTMLElement {
     this.$addBtn.disabled = !this.$addBtn.disabled
   }
 
+
   _activateBtnPhases(){
+    const value = document.querySelector('.shopping-card__input').value;
+    if (Math.sign(+value) === -1 || Math.sign(+value) === -0) return;
+    this._toggleBtnDisable();
+    document.querySelector('.cart').style.opacity = 0;
+    document.querySelector('.cart').style.visibility = 'hidden';
     setTimeout(()=>{
       this._setBtnText('adding...');
     }, 200)
-    this._toggleBtnDisable();
     setTimeout(()=>{
       this._setBtnText('added!');
       this._sendItemPurchaseEvent();
@@ -98,6 +111,8 @@ class ShoppingComponent extends HTMLElement {
     setTimeout(() => {
       this._setBtnText('add to cart');
       this._toggleBtnDisable();
+      document.querySelector('.cart').style.opacity = 1;
+      document.querySelector('.cart').style.visibility = 'visible';
     }, 3500);
   }
 
@@ -127,7 +142,7 @@ class ShoppingComponent extends HTMLElement {
 
   _handleJuiceNav(e){
     e.preventDefault();
-    console.log(e.target.parentNode.pathname)
+    localStorage.setItem('posY', window.scrollY);
     const event = this._createNewEvent('itemBrowse', e.target.parentNode.pathname );
     this.dispatchEvent(event);
   }

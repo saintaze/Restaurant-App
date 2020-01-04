@@ -140,7 +140,10 @@ html {
   position: absolute;
   top: -3rem;
   right: 9.3rem;
+  width: 4rem;
+  height: 3rem;
   cursor: pointer;
+  transition: all .2s;
 
   @media screen and (max-width: 950px){
     right: 6rem;
@@ -346,6 +349,7 @@ html {
   border-radius: 3px;
   text-transform: uppercase;
   border: 2px solid #222;
+  background-color: white;
   
 
   &:hover{
@@ -575,9 +579,6 @@ html {
     margin-top: 4.5rem;
   }
 
-  &__row {  
-
- }
 }
 
 
@@ -783,9 +784,6 @@ html {
 
   }
 
-  &__text {
-
-  }
 
   &__control {
     margin: -1rem 0 1.8rem;
@@ -824,8 +822,9 @@ html {
     font-weight: 500;
     letter-spacing: 0.5px;
     word-spacing: 1px;
-    width: 165.7px;
+    width: 171px;
     color: #222;
+    background-color: white;
 
     &:hover {
       color: white;
@@ -850,18 +849,6 @@ html {
     text-decoration: none;
   }
 
-  // &__carrot {
-  //   display: none;
-  // }
-
-  // // &__vanilla {
-  // //   display: none;
-  // // }
-
-  // &__orange{
-  //   display: none;
-  // }
-
   &__chevron, &__text, &__separator {
     color: rgba(82,82,82,.7);
     font-weight: 600;
@@ -885,6 +872,203 @@ html {
    }
 
 }
+
+// CART SUMMARY
+
+.cart-summary {
+
+  padding: 0 6.5rem;
+  margin-top: 6rem;
+
+  @media screen and (max-width: 700px){
+    padding: 0 2.7rem;
+  }
+
+  &__heading {
+    font-family: $font-din;
+    text-transform: uppercase;
+    font-size: 2.06rem;
+    margin-bottom: 3rem;
+  }
+
+  &__text {
+    line-height: 0.4;
+  }
+}
+
+
+.cart-summary-card {
+
+  &__header-row, &__body-row {
+    display: flex;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.1);;
+  }
+
+  &__header-row {
+    padding-bottom: 0.9rem;
+  }
+
+  &__body-row {
+    padding: 1.6rem 0px;
+  }
+
+
+  &__body-cell, &__header-cell {
+    
+    display: flex;
+    align-items: center;
+
+    &--1 {
+      flex-basis: 20px;
+      padding-right: 3%;
+    }
+
+    &--2 {
+      flex-basis: 94px;
+    }
+    
+    &--3 {
+      flex-grow: 1;
+      padding-left: 2.5%;
+    }
+    
+    &--4 {
+      justify-self: center;
+      flex-grow: 0.5;
+      padding-left: 3.5%;
+    }
+
+    &--5 {
+      justify-self: center;
+      padding-left: 3%;
+    }
+  }
+
+  &__header-cell {
+    color: #bbb;
+    font-family: $font-proxima;
+    text-transform: uppercase;
+    font-size: 1rem;
+
+    &--4 {
+      padding-left: 21.5rem;
+
+      @media screen and (max-width: 700px){
+        padding-left: 35%;
+      }
+    }
+  }
+
+  &__footer-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2.3rem;
+    align-items: center;
+  }
+
+
+  &__cancel {
+    color: #d7d7d7;
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-weight: 300;
+    text-decoration: none;
+
+    &:hover {
+      color: #aaa;
+      transition: all .1s;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+
+  }
+
+  
+  &__link {
+    font-family: $font-proxima;
+    color: rgba(82,82,82,.64);
+    text-decoration: none;
+    font-size: 1.66rem;
+
+    @media screen and (max-width: 700px){
+      font-size: 1.3rem;
+    }
+  }
+
+  &__count {
+    border: 1px solid #eee;
+    background-color: white;
+    height: 2.9rem;
+    font-size: 1.3rem;
+    letter-spacing: .1px;
+    text-transform: uppercase;
+    color: black;
+    width: 3.4rem;
+    text-align: center;
+
+    @media screen and (max-width: 700px){
+      font-size: 1.1rem;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid #ccc;
+      transition: all .16s;
+    }
+  }
+
+  &__subtotal-amount, &__amount {
+    color: rgba(82, 82, 82, 0.7);
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    word-spacing: 2.4px;
+    letter-spacing: .2px; 
+    word-spacing: 2.4px;
+
+    @media screen and (max-width: 700px){
+      font-size: 1.1rem;
+    }
+  }
+
+   &__subtotal-amount {
+     font-size: 1.5rem;
+     @media screen and (max-width: 700px){
+        font-size: 1.2rem;
+      }
+   }
+
+   &__subtotal-label{
+     padding-right: 1.6rem;
+     color: rgba(82,82,82,.6);
+     font-family: $font-proxima;
+     font-size: 1.35rem;
+     @media screen and (max-width: 700px){
+        font-size: 1.18rem;
+      }
+   }
+
+   &__btn-box {
+     display: flex;
+     justify-content: flex-end;
+     margin-top: 3.6rem;
+     font-family: $font-proxima;
+   }
+
+   &__checkout-btn {
+    font-weight: 600;
+    padding: 1.5rem 3.3rem;
+    font-size: 1.18rem;
+    letter-spacing: 0.3px;
+   }
+
+}
+
+
+
 
 input[type=number]::-webkit-inner-spin-button { 
     -webkit-appearance: none;

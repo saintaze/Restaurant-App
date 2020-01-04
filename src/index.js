@@ -8,3 +8,4 @@ import './components/stockists';
 import './components/faq';
 import './components/blog';
 import './components/shopping';
+import './components/cart';
