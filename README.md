@@ -2,10 +2,13 @@
 A restaurant browsing and ordering app.
 
 ### Features
-+ Single Page Application (SPA) built with Native JS
++ Single Page Application (SPA) built entirely with Native JS
 + Native JS WebComponent Architecture
-+ Responsive Design
++ Responsive and Clean Mordern Design
 + Webpack used for Tooling
++ Dynamic Purchasing and Cart functionality (no checkout)
++ Pagination to swap items
+
 
 ##### Built With
 + HTML5
