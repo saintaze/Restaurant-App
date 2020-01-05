@@ -21,6 +21,10 @@ $font-proxima: 'Montserrat', sans-serif;
 html {
   font-size: 64.5%;
 
+  @media screen and (max-width: 500px){
+    font-size: 58%;
+  }
+
   body{
     font-family: sans-serif;
     font-weight: normal;
@@ -152,7 +156,13 @@ html {
   @media screen and (max-width: 660px){
     right: 3rem;
   }
-    
+   
+  @media screen and (max-width: 500px){
+    transform: scale(0.75);
+    right: 1.9rem;
+    top: -4rem;
+  }
+
   &__icon {
     fill: rgba(82, 82, 82, 0.67);  
     width: 2.9rem;
@@ -215,8 +225,6 @@ html {
 .signup{
   margin-bottom: 4rem;
 
-
-
   &__field {
     border: 1px solid #ddd;
     padding: 1.5rem 1.5rem;
@@ -225,6 +233,11 @@ html {
     color: rgba(29, 29, 29, 0.36);
     font-family: $font-proxima;
     font-size: 1.2rem;
+
+    @media screen and (max-width: 352px){
+      margin-bottom: 1.6rem
+    }
+    
 
     &:focus {
       outline: none;
@@ -314,6 +327,10 @@ html {
   @media screen and (max-width: 580px){
     margin-bottom: 2.6rem;
     font-size: 1.04rem;
+  }
+
+  @media screen and (max-width: 500px){
+    line-height: 1.8;
   }
 
   &--contact {
